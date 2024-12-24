@@ -1,0 +1,96 @@
+.card {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+  height: 400px;
+  background: #ffffff;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 1s;
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5);
+  border-radius: 0 20px 20px 0;
+}
+
+ .card:hover {
+  transform: perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  box-sizing: border-box;
+  transform-origin: left;
+  z-index: 1;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-130deg);
+}
+
+.card .imgBox img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 20px 20px 0;
+}
+
+.card .imgBox h1 {
+  position: absolute;
+  color: #fff;
+  font-size: 9rem;
+  font-family: "Bauhaus 93";
+  transition: 1s;
+}
+
+.card:hover .imgBox h1 {
+  transform: rotateY(180deg);
+}
+
+.card .message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+}
+.card .message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+  background: url(../../images/xmas-card.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card .message h2,
+p {
+  position: relative;
+  color: #fff;
+}
+.card .message h2 {
+  font-family: "Bauhaus 93";
+  margin-bottom: 15px;
+}
+.card .message p {
+  font-weight: 300 ;
+}/* */

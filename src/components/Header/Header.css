@@ -1,0 +1,106 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  z-index: 1000 !important;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: "Bauhaus 93";
+}
+.menu {
+  display: none;
+  color: #fff;
+  font-size: 2em;
+  transition: 0.5s;
+  z-index: 100000000000 !important;
+}
+.nav {
+  display: flex;
+}
+.nav li {
+  list-style: none;
+  margin: 0 20px;
+}
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  padding: 10px;
+}
+.nav li:hover a {
+  color: var(--primary);
+}
+
+/* Responsive NAv */
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 2000 !important;
+  gap: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.nav-mobile.active {
+  opacity: 1;
+  visibility: visible;
+}
+.nav-mobile li {
+  position: relative;
+  list-style: none;
+  
+}
+.nav-mobile li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  padding: 10px;
+}
+.nav-mobile li a:hover {
+  color: var(--primary);
+}
+/* Media Query */
+
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  header {
+    padding: 20px;
+  }
+  .nav {
+    display: none;
+  }
+}
